@@ -1,0 +1,192 @@
+[
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "University Fernando Pessoa",
+            "address": "Universidade Fernando Pessoa Praça 9 de Abril, 349 | 4249-004 Porto",
+            "district": "Porto"
+        },
+        "name": "Hello World 2018",
+        "startDate": "2018-02-15",
+        "endDate": "2018-02-15",
+        "image": "hello-world-18.png",
+        "description": "Hello World is back for its third edition. We're thrilled to share everything with you! What are you waiting for to join us?",
+        "url": "https://helloworldconf.pt"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "UPTEC",
+            "address": "Rua Alfredo Allen 455/461 Porto (Auditorium)",
+            "district": "Porto"
+        },
+        "name": "CocoaHeads-Porto",
+        "startDate": "2018-02-15 19:00",
+        "endDate": "2018-02-15 21:30",
+        "description": "Join us for the first ever CocoaHeads meetup in Portugal! We are happy to invite everybody who's interested to the first ever CocoaHeads Meetup in Portugal.",
+        "url": "https://www.meetup.com/CocoaHeads-Porto/events/247413496/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Porto Design Factory",
+            "address": "Rua Dr. António Bernardino de Almeida, 537, Porto, Portugal",
+            "district": "Porto"
+        },
+        "name": "Porto Design Factory  - Social Impact Week #1",
+        "startDate": "2018-02-19 09:30",
+        "endDate": "2018-02-23 18:30",
+        "description": "Social Impact Week #1 will be an intensive week workshop (19/02 - 23/02) focused on social innovation that came up from a partnership between Porto Design Factory and Design Factory Korea.",
+        "url": "https://www.facebook.com/events/773518559488338/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location":{
+            "@type": "Place",
+            "name": "BLIP",
+            "address": "Avenida Camilo, nº 94, 4300-095 Porto",
+            "district": "Porto"
+        },
+        "name": "0xOPOSEC - [0x69] - The Meet",
+        "startDate": "2018-02-22 18:00",
+        "endDate": "2018-02-22 20:00",
+        "description": "Learn something new, get to know other g33ks, build an information security community/group in the Porto area and, the most important thing, have fun.",
+        "url": "https://www.meetup.com/0xOPOSEC/events/247540154/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Farfetch",
+            "address": "Rua da Lionesa nº 446, Edifício G12, 4465-671 Leça do Balio - Porto",
+            "district": "Porto"
+        },
+        "name": "PWL #01 :: Hello Porto!",
+        "startDate": "2018-02-22 19:00",
+        "endDate": "2018-02-22 21:00",
+        "description": "We are delighted to tell you that we are kicking off the first Papers We Love @ Porto. Our goal is to help bridge the gap between Porto industry and academics: membership of both types are very welcome; and to dive deep into interesting programming topics.",
+        "url": "https://www.meetup.com/Papers-We-Love-Porto/events/247544576/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location":{
+            "@type": "Place",
+            "name": "Pólo Zero",
+            "address": "Passeio dos Clérigos, Rua São Filipe de Nery, nº 87 4050-546 - Porto",
+            "district": "Porto"
+        },
+        "name": "Game Dev Meet Norte - Game Dev Meet NORTE - Fevereiro",
+        "startDate": "2018-02-23 18:30",
+        "endDate": "2018-02-23 21:00",
+        "description": "A group for all enthusiasts of game creation, whether aspiring, amateur or professional game devs, everyone is welcome.",
+        "url": "https://www.meetup.com/GameDevMeetPorto/events/247312902/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Porto I/O",
+            "address": "R. de Cândido dos Reis 81, 4050-152 Porto",
+            "district": "Porto"
+        },
+        "name": "Python Porto Meetup - PyCoffee. Hot coffee and Pythonic discussions in Porto",
+        "startDate": "2018-02-24 10:00",
+        "endDate": "2018-02-24 13:00",
+        "description": "Meetup for all Python enthusiasts in Porto.",
+        "url": "https://www.meetup.com/pyporto/events/gdxmgpyxdbgc/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location":{
+            "@type": "Place",
+            "name": "Pólo Zero",
+            "address": "Passeio dos Clérigos, Rua São Filipe de Nery, nº 87 4050-546 - Porto",
+            "district": "Porto"
+        },
+        "name": "OPO.js Meetup #6",
+        "startDate": "2018-02-28 19:00",
+        "endDate": "2018-02-28 21:00",
+        "description": "2018 is up and running and it's time we bring the Porto JavaScript Community together once again with OPO.js #6.",
+        "url": "https://www.meetup.com/opo-js/events/247800372/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location":{
+            "@type": "Place",
+            "name": "HostelWorld",
+            "address": "Rua Júlio Dinis 676 - Porto",
+            "district": "Porto"
+        },
+        "name": "DevOps Porto - DevOps Porto #13: Google Cloud Platform and Kubernetes",
+        "startDate": "2018-02-28 18:45",
+        "endDate": "2018-02-28 20:45",
+        "description": "Welcome to our #13th meetup about DevOps and its culture, values and practices. This will be our first meetup around Google Cloud Platform and will be hosted by Hostelworld.",
+        "url": "https://www.meetup.com/devopsporto/events/247652857/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Porto I/O",
+            "address": "R. de Cândido dos Reis 81, 4050-152 Porto",
+            "district": "Porto"
+        },
+        "name": "Porto Codes",
+        "startDate": "2018-03-08 19:00",
+        "endDate": "2018-03-08 21:00",
+        "description": "Porto Codes is a meetup for local and international programming enthusiasts. The talks are recorded and published with the presenters' consent as one of our goals is to provide programming resources to the community.",
+        "url": "https://www.meetup.com/portocodes/events/drgxdpyxfblb/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Edifício Palácio dos Correios",
+            "address": "R. do Bonjardim 345, 4000-010 Porto",
+            "district": "Porto"
+        },
+        "name": "Make or Break.",
+        "startDate": "2018-04-13",
+        "endDate": "2018-04-15",
+        "description": "Make or Break is a 3-day tech fest with prizes, workshops, gadgets, food, and more. Co-organized by AlumniEI-FEUPPorto Codes is a meetup for local and international programming enthusiasts.",
+        "url": "https://makeorbreak.io/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location":{
+            "@type": "Place",
+            "name": "Hard Club",
+            "address": "HARD-CLUB - Mercado Ferreira Borges, 4050-252 Porto",
+            "district": "Porto"
+        },
+        "name": "TECHinPORTO 2018",
+        "startDate": "2018-06-14",
+        "endDate": "2018-06-15",
+        "description": "TECHinPORTO was born in 2017 from Jumia's will to share and promote Porto's state of the art Information Technologies. By teaming up with great technology partners, we expect to bring the best from the tech community to our blooming city, learn together and deliver a kickass experience.",
+        "url": "https://techinporto.com"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "name": "Commit Porto",
+        "startDate": "2018-06-30",
+        "endDate": "2018-06-30",
+        "description": "Commit Porto is a tech conference to be held in Porto, bringing together professionals from different areas talking about their experience tackling challenges in software development with the latest technologies! It will be an excellent opportunity for knowledge sharing and inherently promote Porto as a vibrant and dynamic city for technology-based companies.",
+        "url": "http://commitporto.com/"
+    }
+]
