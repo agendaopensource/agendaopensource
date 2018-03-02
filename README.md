@@ -1,7 +1,7 @@
 # Work In Progress
 
 # ToDo:
-[ ] Move all custom CSS values into theme.js
+[ ] Move all custom CSS values into theme.js  
 [ ] Documentation
 
 # Documentation
