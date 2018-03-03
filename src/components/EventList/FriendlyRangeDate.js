@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 
+// @todo: big refactor on this code!
 const FriendlyRangeDate = ({ startDate, endDate }) => {
   const startDateSplit = {
     year: moment(startDate).format('YYYY'),

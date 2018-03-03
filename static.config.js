@@ -17,7 +17,8 @@ export default {
     analytics: process.env.SITE_ANALYTICS || '',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    //const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    const posts = [];
 
     events.map((eventObj, index) => {
       const event = eventObj;
