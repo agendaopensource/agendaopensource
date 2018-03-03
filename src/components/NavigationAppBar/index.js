@@ -29,6 +29,9 @@ const styles = theme => ({
     color: '#FFFFFF',
     textDecoration: 'none',
   },
+  appBar: {
+    flexWrap: 'wrap',
+  },
   button: {
     color: '#FFFFFF',
   },

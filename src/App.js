@@ -12,18 +12,17 @@ import store from './connectors/redux';
 // Custom styles
 const styles = {
   '@global': {
+    fontFace: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
     img: {
       maxWidth: '100%',
     },
-  },
-  appBar: {
-    flexWrap: 'wrap',
   },
   tabs: {
     width: '100%',
   },
   content: {
     padding: '1rem',
+    paddingTop: '5rem',
   },
 };
 
