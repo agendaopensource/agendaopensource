@@ -1,16 +1,12 @@
 import { TOGGLE_DRAWER } from '../actions/drawer';
 
 const initialState = {
-  drawer: {
-    open: false,
-  },
+  open: false,
 };
 
 const toggleDrawer = state => ({
   ...state,
-  drawer: {
-    open: !state.drawer.open,
-  },
+  open: !state.open,
 });
 
 export default (state = initialState, action) => {

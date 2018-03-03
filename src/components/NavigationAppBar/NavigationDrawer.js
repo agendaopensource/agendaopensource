@@ -37,7 +37,7 @@ class NavigationDrawer extends React.Component {
         classes={{
           paper: classes.drawerPaper,
         }}
-        open={drawerState.drawer.open}
+        open={drawerState.open}
       >
         <div className={classes.drawerInner}>
           <div className={classes.drawerHeader}>
