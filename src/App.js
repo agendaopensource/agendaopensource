@@ -10,7 +10,7 @@ import NavigationAppBar from './components/NavigationAppBar';
 import store from './connectors/redux';
 
 // Custom styles
-const styles = {
+const styles = theme => ({
   '@global': {
     fontFace: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
     img: {
@@ -23,8 +23,14 @@ const styles = {
   content: {
     padding: '1rem',
     paddingTop: '5rem',
+    margin: '0 auto',
+    maxWidth: '1280px',
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '80%',
+    },
   },
-};
+});
 
 class App extends PureComponent {
   // Remove the server-side injected CSS.

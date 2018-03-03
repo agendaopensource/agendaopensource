@@ -29,6 +29,14 @@ const styles = theme => ({
     color: '#FFFFFF',
     textDecoration: 'none',
   },
+  container: {
+    margin: '0 auto',
+    maxWidth: '1280px',
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '80%',
+    },
+  },
   appBar: {
     flexWrap: 'wrap',
   },
@@ -56,7 +64,7 @@ class NavigationAppBar extends React.Component {
     return (
       <div>
         <AppBar className={classes.appBar}>
-          <Toolbar>
+          <Toolbar className={classes.container}>
             <Hidden mdUp>
               <IconButton
                 className={classes.menuButton}
