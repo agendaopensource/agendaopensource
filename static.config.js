@@ -1,6 +1,5 @@
 import React from 'react';
 import dotenv from 'dotenv';
-import axios from 'axios';
 import { SheetsRegistry } from 'react-jss/lib/jss';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles';
@@ -17,7 +16,6 @@ export default {
     analytics: process.env.SITE_ANALYTICS || '',
   }),
   getRoutes: async () => {
-    //const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts');
     const posts = [];
 
     events.map((eventObj, index) => {
@@ -60,21 +58,27 @@ export default {
     ];
   },
   renderToHtml: (render, Comp, meta) => {
+    const metaUpdated = meta;
     const sheetsRegistry = new SheetsRegistry();
     const muiTheme = createMuiTheme(theme);
     const generateClassName = createGenerateClassName();
-    const html = render(
-      <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
+    const html = render((
+      <JssProvider
+        registry={sheetsRegistry}
+        generateClassName={generateClassName}
+      >
         <MuiThemeProvider theme={muiTheme} sheetsManager={new Map()}>
           <Comp />
         </MuiThemeProvider>
-      </JssProvider>,
-    );
-    meta.jssStyles = sheetsRegistry.toString();
+      </JssProvider>));
+
+    metaUpdated.jssStyles = sheetsRegistry.toString();
     return html;
   },
 
-  Document: ({Html, Head, Body, children, renderMeta}) => (
+  Document: ({
+    Html, Head, Body, children, renderMeta,
+  }) => (
     <Html>
       <Head>
         <meta charSet="UTF-8" />

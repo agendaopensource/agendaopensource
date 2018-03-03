@@ -25,19 +25,19 @@ const styles = {
   content: {
     padding: '1rem',
   },
-}
+};
 
 class App extends PureComponent {
   // Remove the server-side injected CSS.
-  componentDidMount () {
-    const jssStyles = document.getElementById('jss-server-side')
+  componentDidMount() {
+    const jssStyles = document.getElementById('jss-server-side');
     if (jssStyles && jssStyles.parentNode) {
-      jssStyles.parentNode.removeChild(jssStyles)
+      jssStyles.parentNode.removeChild(jssStyles);
     }
   }
 
-  render () {
-    const { classes } = this.props
+  render() {
+    const { classes } = this.props;
 
     return (
       <Provider store={store}>
@@ -51,11 +51,11 @@ class App extends PureComponent {
           </div>
         </Router>
       </Provider>
-    )
+    );
   }
 }
 
-App.protoType = {
+App.propTypes = {
   classes: PropType.object.isRequired,
 };
 

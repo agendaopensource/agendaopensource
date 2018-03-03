@@ -1,7 +1,7 @@
-import React from 'react'
-import { withRouteData, Link } from 'react-static'
+import React from 'react';
+import { withRouteData, Link } from 'react-static';
 //
-import Typography from 'material-ui/Typography'
+import Typography from 'material-ui/Typography';
 
 
 export default withRouteData(({ post }) => (
@@ -16,4 +16,4 @@ export default withRouteData(({ post }) => (
       {post.body}
     </Typography>
   </div>
-))
+));

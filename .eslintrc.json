@@ -7,7 +7,7 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "import/no-unresolved": [2, { "ignore": [""] }],
-        "import/extensions": ["error", "never", { "packages": "always" }],
+        "import/extensions": ["error", "never", { "js": "never", "json": "always" }],
         "react/forbid-prop-types": [2, { "forbid": []}]
     }
 }
