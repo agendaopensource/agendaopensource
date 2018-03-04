@@ -36,6 +36,10 @@ export default {
         }),
       },
       {
+        path: '/speakers',
+        component: 'src/containers/Speakers',
+      },
+      {
         path: '/about',
         component: 'src/containers/About',
       },

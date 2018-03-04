@@ -12,7 +12,7 @@ export default [
   },
   {
     id: 2,
-    link: '/blog',
+    link: '/speakers',
     label: 'Speakers',
     icon: FaceIcon,
     active: 0,

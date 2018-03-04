@@ -30,6 +30,7 @@ const styles = theme => ({
     paddingTop: '5rem',
     margin: '0 auto',
     maxWidth: '1280px',
+    minHeight: '400px',
     width: '100%',
     [theme.breakpoints.up('md')]: {
       width: '80%',
