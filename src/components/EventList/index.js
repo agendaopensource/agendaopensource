@@ -59,7 +59,7 @@ class EventList extends React.Component {
             <Grid key={event.uniqId} item xs={12}>
               <Paper className={classes.paperEvent}>
                 <Typography variant="title" component="h2" paragraph>
-                  <Link to={event.url} href={event.url} className={classes.link}>
+                  <Link to={event.url} href={event.url} className={classes.link} target="_blank" rel="noopener">
                     {event.name}
                   </Link>
                 </Typography>
@@ -75,6 +75,8 @@ class EventList extends React.Component {
                         to={googleMapLink(event.location.address)}
                         href={googleMapLink(event.location.address)}
                         className={classes.link}
+                        target="_blank"
+                        rel="noopener"
                       >
                         { event.location.name }
                       </Link>
