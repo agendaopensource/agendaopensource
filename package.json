@@ -7,7 +7,7 @@
     "start": "react-static start",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "lint": "npx eslint ./src/"
+    "test": "npx eslint ./src/"
   },
   "dependencies": {
     "axios": "^0.16.2",
