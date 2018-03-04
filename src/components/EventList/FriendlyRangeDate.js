@@ -39,9 +39,9 @@ const FriendlyRangeDate = ({ startDate, endDate }) => {
       includeYear = ' YYYY';
     }
     if (startDateMoment.format('hhmm') !== endDateMoment.format('hhmm')) {
-      friendlyRangeDate = `${startDateMoment.format(`MMMM Do${includeYear}, h:mm`)} - ${endDateMoment.format('h:mm')}`;
+      friendlyRangeDate = `${startDateMoment.format(`MMM Do${includeYear}, h:mm`)} - ${endDateMoment.format('h:mm')}`;
     } else {
-      friendlyRangeDate = `${startDateMoment.format(`MMMM Do${includeYear}`)}`;
+      friendlyRangeDate = `${startDateMoment.format(`MMM Do${includeYear}`)}`;
     }
   } else {
     // If current year, no need to add it
@@ -55,10 +55,10 @@ const FriendlyRangeDate = ({ startDate, endDate }) => {
     }
     let includeEndMonth = '';
     if (startDateMoment.format('MM') !== endDateMoment.format('MM')) {
-      includeEndMonth = 'MMMM ';
+      includeEndMonth = 'MMM ';
     }
 
-    friendlyRangeDate = `${startDateMoment.format(`MMMM D${includeStartYear}`)}-${endDateMoment.format(`${includeEndMonth}Do${includeEndYear}`)}`;
+    friendlyRangeDate = `${startDateMoment.format(`MMM D${includeStartYear}`)}-${endDateMoment.format(`${includeEndMonth}Do${includeEndYear}`)}`;
 
     //    if (startDateMoment.format('YYYY') !== moment().format('YYYY'))
   }

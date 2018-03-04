@@ -7,6 +7,7 @@ import { hot } from 'react-hot-loader';
 import Reboot from 'material-ui/Reboot';
 import { withStyles } from 'material-ui/styles';
 import NavigationAppBar from './components/NavigationAppBar';
+import Footer from './components/Footer';
 import store from './connectors/redux';
 
 // Custom styles
@@ -15,6 +16,10 @@ const styles = theme => ({
     fontFace: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
     img: {
       maxWidth: '100%',
+    },
+    a: {
+      textDecoration: 'none',
+      color: '#FFFFFF',
     },
   },
   tabs: {
@@ -53,6 +58,7 @@ class App extends PureComponent {
             <div className={classes.content}>
               <Routes />
             </div>
+            <Footer />
           </div>
         </Router>
       </Provider>

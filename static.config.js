@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { SheetsRegistry } from 'react-jss/lib/jss';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles';
+import moment from 'moment';
 import theme from './src/theme';
 
 // Data
@@ -18,18 +19,20 @@ export default {
   getRoutes: async () => {
     const posts = [];
 
-    events.map((eventObj, index) => {
-      const event = eventObj;
-      event.uniqId = index;
-      return event;
-    });
+    const tailoredEvents = events
+      .filter(event => moment(event.endDate).isAfter())
+      .map((eventObj, index) => {
+        const event = eventObj;
+        event.uniqId = index;
+        return event;
+      });
 
     return [
       {
         path: '/',
         component: 'src/containers/Home',
         getData: () => ({
-          events,
+          events: tailoredEvents,
         }),
       },
       {
@@ -41,7 +44,7 @@ export default {
         component: 'src/containers/Blog',
         getData: () => ({
           posts,
-          events,
+          events: tailoredEvents,
         }),
         children: posts.map(post => ({
           path: `/post/${post.id}`,
@@ -83,7 +86,6 @@ export default {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
       </Head>
       <Body>
         {children}
