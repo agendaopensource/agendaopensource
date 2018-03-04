@@ -10,6 +10,8 @@ import ScheduleIcon from 'material-ui-icons/Schedule';
 import PlaceIcon from 'material-ui-icons/Place';
 import FriendlyRangeDate from './FriendlyRangeDate';
 
+import AppConfig from '../../AppConfig';
+
 const styles = theme => ({
   paperEvent: theme.mixins.gutters({
     paddingTop: 16,
@@ -37,7 +39,7 @@ const styles = theme => ({
   },
 });
 
-const googleMapLink = url => `https://www.google.pt/maps/place/${encodeURI(url)}`;
+const googleMapLink = url => `${AppConfig.googleMapsUrl}/${encodeURI(url)}`;
 
 class EventList extends React.Component {
   constructor(props) {

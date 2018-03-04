@@ -8,6 +8,7 @@ import theme from './src/theme';
 
 // Data
 import events from './_data/events.json';
+import callForPapers from './_data/callforpapers.json';
 
 dotenv.config();
 
@@ -26,6 +27,10 @@ export default {
         event.uniqId = index;
         return event;
       });
+    const frequentCallForPapers = callForPapers.frequent;
+    const sporadicCallForPapers = callForPapers
+      .sporadic
+      .filter(cfp => moment(cfp.deadline).isAfter());
 
     return [
       {
@@ -38,6 +43,14 @@ export default {
       {
         path: '/speakers',
         component: 'src/containers/Speakers',
+      },
+      {
+        path: '/call-for-papers',
+        component: 'src/containers/CallForPapers',
+        getData: () => ({
+          frequentCallForPapers,
+          sporadicCallForPapers,
+        }),
       },
       {
         path: '/about',

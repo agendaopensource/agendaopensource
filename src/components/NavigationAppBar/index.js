@@ -86,6 +86,8 @@ class NavigationAppBar extends React.Component {
                   key={menuOption.id}
                   component={Link}
                   to={menuOption.link}
+                  target={menuOption.target}
+                  rel={menuOption.rel}
                   className={classes.button}
                   onClick={() => activateMenu(menuOption.id)}
                 >

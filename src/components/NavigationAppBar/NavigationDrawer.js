@@ -10,6 +10,7 @@ import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import { Link } from 'react-static';
 import { setMenuActive } from '../../connectors/redux/actions/menu';
 import { toggleDrawer } from '../../connectors/redux/actions/drawer';
+import MenuItem from 'material-ui';
 
 const styles = {};
 
@@ -53,6 +54,8 @@ class NavigationDrawer extends React.Component {
                 key={menuOption.id}
                 component={Link}
                 to={menuOption.link}
+                target={menuOption.target}
+                rel={menuOption.rel}
                 onClick={() => activateMenu(menuOption.id)}
               >
                 <ListItemIcon>
