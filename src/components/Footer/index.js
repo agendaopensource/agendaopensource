@@ -2,16 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-
-// Icons
-import Paper from 'material-ui/Paper';
-import MenuIcon from 'material-ui-icons/Menu';
 import { Link } from 'react-static';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import Hidden from 'material-ui/Hidden';
-import IconButton from 'material-ui/IconButton';
 import FavoriteBorderIcon from 'material-ui-icons/FavoriteBorder';
 
 const styles = theme => ({
