@@ -10,7 +10,6 @@
     "test": "npx eslint ./src/"
   },
   "dependencies": {
-    "axios": "^0.16.2",
     "dotenv": "^5.0.1",
     "material-ui": "^1.0.0-beta.27",
     "material-ui-icons": "^1.0.0-beta.35",
