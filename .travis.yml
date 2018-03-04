@@ -10,11 +10,12 @@ install:
 script:
   - yarn build
 after_success:
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "Travis"
-  - cd dist/
-  - git remote rm origin
-  - git remote add origin https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git
-  - git add --all
-  - git commit -a -m "Travis - ${TRAVIS_BUILD_NUMBER}"
-  - git push --force origin gh-pages
+ - cd dist/
+ - git init .
+ - git config --global user.email "travis@travis-ci.org"
+ - git config --global user.name "Travis"
+ - git remote add origin https://${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git
+ - git checkout -b gh-pages
+ - git add --all -f .
+ - git commit -a -m "Travis - ${TRAVIS_BUILD_NUMBER}"
+ - git push --force origin gh-pages
