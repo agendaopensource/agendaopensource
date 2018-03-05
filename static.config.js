@@ -6,6 +6,7 @@ import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'mater
 import moment from 'moment';
 import theme from './src/theme';
 
+
 // Data
 import events from './_data/events.json';
 import callForPapers from './_data/callforpapers.json';
@@ -101,6 +102,7 @@ export default {
   }) => (
     <Html>
       <Head>
+        <title>Open Agenda</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

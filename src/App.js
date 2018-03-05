@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import { Router, Head } from 'react-static';
+import { Router } from 'react-static';
 import Routes from 'react-static-routes';
 import PropType from 'prop-types';
 import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import Reboot from 'material-ui/Reboot';
 import { withStyles } from 'material-ui/styles';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 import NavigationAppBar from './components/NavigationAppBar';
 import Footer from './components/Footer';
 import store from './connectors/redux';
