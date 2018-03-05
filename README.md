@@ -74,12 +74,12 @@ Environment variables that are needed for development are specified in ``.env.di
 
 # ToDo:
 [] Add helmet for SEO stuff  
-[ ] Move all custom CSS values into theme.js  
-[ ] Review all styles (use theme constants!)  
-[ ] Documentation  
+[] Move all custom CSS values into theme.js  
+[] Review all styles (use theme constants!)  
+[] Documentation  
 [] Move site urls e constants to getSiteData() and consume using withSiteData  
 [] Test everything!  
-
+[] PWA/AMP  
 
 # Documentation
 - Airbnb lint

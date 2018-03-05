@@ -1,5 +1,5 @@
 {
-  "name": "react-static-material-ui",
+  "name": "open-agenda",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,11 +17,12 @@
     "prop-types": "^15.6.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.0.0",
     "react-jss": "^8.3.3",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
-    "react-static": "^5.1.14",
+    "react-static": "^5.3.4",
     "redux": "^3.7.2"
   },
   "devDependencies": {
