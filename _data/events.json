@@ -80,6 +80,21 @@
         "@type": "Event",
         "location":{
             "@type": "Place",
+            "name": "Altran",
+            "address": "28 Rua de Serpa Pinto, 4400-012 Vila Nova de Gaia",
+            "district": "Porto"
+        },
+        "name": "Porto testers meetup #2.4",
+        "startDate": "2018-02-27 18:45",
+        "endDate": "2018-02-27 21:00",
+        "description": "A group of friends that decided to contribute in the community by starting to organize events where we could gather everyone interested in all the topics regarding testers.",
+        "url": "https://www.eventbrite.pt/e/bilhetes-porto-testers-meetup-24-43179566245"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location":{
+            "@type": "Place",
             "name": "Pólo Zero",
             "address": "Passeio dos Clérigos, Rua São Filipe de Nery, nº 87 4050-546 - Porto",
             "district": "Porto"
