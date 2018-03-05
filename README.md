@@ -1,7 +1,7 @@
-(!) Under heavy devlopment (!)
-
 Codebase of [https://agendaopensource.github.io](https://agendaopensource.github.io)
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/agendaopensource/jam-react/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/agendaopensource/jam-react/?branch=master)
+[![Build Status](https://travis-ci.org/agendaopensource/jam-react.svg?branch=master)](https://travis-ci.org/agendaopensource/jam-react)
 
 # Add a new event or meetup
 
