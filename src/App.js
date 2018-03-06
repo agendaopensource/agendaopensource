@@ -14,7 +14,6 @@ import store from './connectors/redux';
 // Custom styles
 const styles = theme => ({
   '@global': {
-    fontFace: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif',
     img: {
       maxWidth: '100%',
     },
