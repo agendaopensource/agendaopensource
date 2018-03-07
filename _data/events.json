@@ -185,6 +185,36 @@
         "@type": "Event",
         "location": {
             "@type": "Place",
+            "name": "UPTEC - Polo Tecnológico",
+            "address": "Rua Alfredo Allen 455/461 Porto",
+            "district": "Porto"
+        },
+        "name": "DSPT#23 - Data Science and AI in production-critical environments",
+        "startDate": "2018-03-08 18:30",
+        "endDate": "2018-03-08 21:00",
+        "description": "Time for another meetup in Porto. Let's meet to discuss Data Science and complain about the bad weather while having some beers :) This time we will have two new speakers talking about deploying AI systems in production-ready and critical environments.",
+        "url": "https://www.meetup.com/datascienceportugal/events/248206465/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "ESMAD - Escola Superior de Media Artes e Design",
+            "address": "Rua D. Sancho I, 981, 4480-876 Vila do Conde",
+            "district": "Vila do Conde"
+        },
+        "name": "MAD Game Jam 2018",
+        "startDate": "2018-03-16",
+        "endDate": "2018-03-18",
+        "description": "O evento MAD Game Jam é uma competição que desafia várias equipas a criarem, em 40 horas seguidas, videojogos sobre uma temática que só vão conhecer no próprio dia.",
+        "url": "https://www.facebook.com/events/203989873518460/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
             "name": "Farfetch",
             "address": "Rua da Lionesa nº 446, Edifício G12, 4465-671 Leça do Balio - Porto",
             "district": "Porto"
