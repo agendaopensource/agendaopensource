@@ -108,7 +108,7 @@ export default {
       </Head>
       <Body>
         {children}
-        <style id="jss-server-side">{renderMeta.jssStyles}</style>
+        <style id="jss-server-side" dangerouslySetInnerHTML={{__html: renderMeta.jssStyles}} />
       </Body>
     </Html>
   ),
