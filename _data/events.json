@@ -155,6 +155,21 @@
         "@type": "Event",
         "location": {
             "@type": "Place",
+            "name": "Founders Founders",
+            "address": "358, Rua da Constituição 346, 4200-192 Porto",
+            "district": "Porto"
+        },
+        "name": "PyPorto #6: From idea to reality & Project Jupyter",
+        "startDate": "2018-03-07 18:30",
+        "endDate": "2018-03-07 20:30",
+        "description": "I start with a bit of the IPython and Jupyter history and architecture, then make an overview of their newer, much more powerful but less known projects JupyterLab and JupyterHub, and finish my talk some speculations on how it all can be exploited for your fun and profit.",
+        "url": "https://www.meetup.com/pt-BR/pyporto/events/247610018/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
             "name": "Porto I/O",
             "address": "R. de Cândido dos Reis 81, 4050-152 Porto",
             "district": "Porto"
