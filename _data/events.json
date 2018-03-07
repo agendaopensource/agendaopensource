@@ -185,6 +185,21 @@
         "@type": "Event",
         "location": {
             "@type": "Place",
+            "name": "Farfetch",
+            "address": "Rua da Lionesa nº 446, Edifício G12, 4465-671 Leça do Balio - Porto",
+            "district": "Porto"
+        },
+        "name": "First Elastic Meetup in Porto",
+        "startDate": "2018-03-22 18:30",
+        "endDate": "2018-03-22 22:00",
+        "description": "We're happy to announce that the 1st Elastic Meetup in Porto will be held on 22nd March in partnership with Syone, Elastic and Farfetch!",
+        "url": "https://www.meetup.com/pt-BR/Elastic-Portugal/events/248318958/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
             "name": "Edifício Palácio dos Correios",
             "address": "R. do Bonjardim 345, 4000-010 Porto",
             "district": "Porto"
