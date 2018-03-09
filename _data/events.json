@@ -228,6 +228,21 @@
     {
         "@context": "http://schema.org",
         "@type": "Event",
+        "location":{
+            "@type": "Place",
+            "name": "Jumia Porto Tech Center",
+            "address": "Rua Ricardo Severo n3, 1º Piso, 4050-515 Porto            ",
+            "district": "Porto"
+        },
+        "name": "DevOps Porto #14: Databases on containers: from myth to uber-performance",
+        "startDate": "2018-03-22 18:45",
+        "endDate": "2018-03-22 20:45",
+        "description": "Welcome to our #14th meetup about DevOps and its culture, values and practices. This meetup will be around Databases on containers and will be hosted by Jumia Porto Tech Center.",
+        "url": "https://www.meetup.com/devopsporto/events/248550425/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
         "location": {
             "@type": "Place",
             "name": "Edifício Palácio dos Correios",
