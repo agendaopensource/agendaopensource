@@ -5,6 +5,7 @@ import Grid from 'material-ui/Grid';
 import { Link } from 'react-static';
 import Typography from 'material-ui/Typography';
 import FavoriteBorderIcon from 'material-ui-icons/FavoriteBorder';
+import AppConfig from '../../AppConfig';
 
 const styles = theme => ({
   root: {
@@ -67,8 +68,10 @@ const Footer = ({ classes }) => (
             <ul className={classes.list}>
               <li className={classes.listItem}>
                 <Link
-                  to="https://github.com/agendaopensource/agendaopensource.github.io"
-                  href="https://github.com/agendaopensource/agendaopensource.github.io"
+                  to={AppConfig.githubUrl}
+                  href={AppConfig.githubUrl}
+                  target="_blank"
+                  rel="noopener"
                 >
                   GitHub
                 </Link>
