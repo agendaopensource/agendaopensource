@@ -1,0 +1,15 @@
+version: '3'
+services:
+  agenda:
+    build:
+      context: ./
+      args:
+        UID: ${UID-1000}
+        NODE_ENV: development
+    volumes:
+      - ./:/usr/src/app
+    #env_file:
+    #  - .env
+    ports:
+      - "127.0.0.1:3000:3000"
+    command: yarn start
