@@ -57,12 +57,14 @@ Then open http://localhost:3000/
 
 # Environment variables
 
-Environment variables that are needed for development are specified in ``.env.dist``
+These are the variables that can be used in `.env` to influence behavior.  
+Environment variables that are needed for development are specified in `.env.dist`  
 
-```
-- SITE_URL: http://localhost:8080/
-- SITE_ANALYTICS - Analytics
-```
+- `UID` : To define the user id for the docker container. You should use your uid to avoid permissions issues.
+- `SITE_ROOT` : Define the site base URL
+- `SITE_ANALYTICS` : Analytics token
+- `MEETUP_KEY` : Only for `tools/searchevents.js`, to access meetup api
+- `MEETUP_GROUPS` : Name of groups separated by commas
 
 # Dependencies
 
