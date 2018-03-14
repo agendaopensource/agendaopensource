@@ -7,10 +7,6 @@ dotenv.config();
 const key = process.env.MEETUP_KEY;
 const meetupGroups = process.env.MEETUP_GROUPS.split(',');
 
-async function getMeetupGroupEvents(groupName) {
-  return data;
-}
-
 meetupGroups.map(async (groupName) => {
   const { data: events } = await axios.get(`https://api.meetup.com/${groupName}/events?&sign=true&key=${key}`);
 
@@ -21,7 +17,7 @@ meetupGroups.map(async (groupName) => {
 
     const endDate =
       moment(startDate)
-        .add(event.duration / 1000, 'second') // If not there can be assumed 3h
+        .add(event.duration / 1000, 'second') // If not there, can be assumed 3h
         .format('YYYY-MM-DD kk:mm');
 
     const eventParsed = {
