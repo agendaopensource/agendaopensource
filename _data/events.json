@@ -228,6 +228,21 @@
     {
         "@context": "http://schema.org",
         "@type": "Event",
+        "location":{
+            "@type": "Place",
+            "name": "HostelWorld",
+            "address": "Rua Júlio Dinis 676 - Porto",
+            "district": "Porto"
+        },
+        "name": "Porto Testers Meetup #2.5",
+        "startDate": "2018-03-21 18:45",
+        "endDate": "2018-03-21 21:00",
+        "description": "Agile blossomed because everyone thought Waterfall was shit, Continuous Integration was born of Agile, DevOps depends on Continuous Integration, Continuous delivery is built on DevOps, DevSecOps appeared because the one security guy in the technology got sick of fixing OWASP top 10 bugs in production. Some methodologies only exist for a week, others simply won’t die, *cough* waterfall *cough*, but the one thing they all require in order to be successful is testing. In this talk Dara McGann, Hostelworld.com’s Chief Kanohalidohi, will outline practical advice how to effectively test throughout the development cycle regardless of methodology. Including process, tooling and culture tips learned from his involvement in Hostelworld’s ongoing agile transformation. Dara McGann is Hostelworld.com’s Lead QA Automation Engineer, and has been testing web, mobile and API’s for the last five years.",
+        "url": "https://www.eventbrite.pt/e/bilhetes-porto-testers-meetup-25-43675369205"
+    },    
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
         "location": {
             "@type": "Place",
             "name": "Farfetch",
