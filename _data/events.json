@@ -215,6 +215,21 @@
         "@type": "Event",
         "location": {
             "@type": "Place",
+            "name": "UPTEC - Polo Tecnológico",
+            "address": "461 Rua Alfredo Allen",
+            "district": "Porto"
+        },
+        "name": "GDG - Android Sessions - #1 XING",
+        "startDate": "2018-03-19 18:30",
+        "endDate": "2018-03-19 20:00",
+        "description": "The goal of this event is to gather the Android community in Porto, helping everyone to get up to date and to know Android a little bit better. We'll share knowledge and experience about the Android ecosystem. This is the #1 Android Session, and it will be hosted in collaboration with XING (https://www.xing.com/) and they'll share with us their experience. • So, what's the plan here? 18:30 - Welcome snacks!18:50 - Language abuse &amp; Unreadability - Yahya Bayramoğlu, XING19:25 - How to dagger 2.15 - Pedro Glória20:00 - That's all folks! • Should I bring anything?There is no need to bring anything, but if you have something cool to show you can bring it and share it with us! • Important stuff!If you are joining, please book it here. We have limited sitting. AlsoJoin GDG Porto on Slack https://gdgporto.slack.com/ and check out the #dev-android channel! If you need an invite please ping us at [masked] • About the speakers ## Yahya Bayramoğlu Yahya Bayramoğlu is a passionate Android Developer from Turkey and currently working at XING located in Hamburg/Germany. He has been developing for Android Platform since 2012, and he is constantly adapting himself to the platform changes and requirements and always following up the new cool things on industry. https://github.com/yayaahttps://www.xing.com/profile/Yahya_BAYRAMOGLUhttps://twitter.com/YahyaBayramoglu ## Pedro Glória Hello, I'm Pedro an Android developer. I love tech, games, series and dogs. I've been programming in android for over 3 years where I've been in companies like Maily, a message/drawing app for kids, Bliss where I've worked with some major Portuguese companies and now at Farfetch. During my earlier programming days I've started with frontend where I've learned AngularJs, but Android is my passion. My life motto is Programmer at day. Progamer at night ! https://www.linkedin.com/in/pedro-gl%C3%B3ria-b269a871/https://github.com/Peddro ",
+        "url": "https://www.meetup.com/GDG-Porto/events/248405049/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
             "name": "Farfetch",
             "address": "Rua da Lionesa nº 446, Edifício G12, 4465-671 Leça do Balio - Porto",
             "district": "Porto"
@@ -239,6 +254,36 @@
         "endDate": "2018-03-22 20:45",
         "description": "Welcome to our #14th meetup about DevOps and its culture, values and practices. This meetup will be around Databases on containers and will be hosted by Jumia Porto Tech Center.",
         "url": "https://www.meetup.com/devopsporto/events/248550425/"
+    },  
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Blip",
+            "address": "Avenida Camilo, nº 94, 4300-095",
+            "district": "Porto"
+        },
+        "name": "[0x6A] - The Meet",
+        "startDate": "2018-03-28 18:00",
+        "endDate": "2018-03-28 20:00",
+        "description": "[0x6A] - The Meet With the Easter bunny just around the corner, there seems to be no better time to hunt down all those \"easter eggs\" in our CPUs. Be on the grid and don't miss the chance to keep yourself updated with the latest InfoSec headlines and hot topics such as the impact of the GDPR. Spread the word and join us for our next InfoSec egg hunt. As usual, we ask you for some help with the logistics. Be sure to RSVP yes only when you are 100% sure you can attend. Thanks in advance. In the meantime, you can join our Slack chat (https://oposec.herokuapp.com/) to discuss all kind of hackish stuff and, of course, interact with others members. Hope to see you soon. [Goals] Learn something new, get to know other g33ks, build an information security community/group in the Porto area and, the most important thing, have fun. [Agenda] - Who are you? (New participants small introduction)- Microarchitectural bugs are everywhere (EN/PT) by Duarte Monteiro (@d0kt0r)- GDPR: the impact on how we develop and maintain our services (EN/PT) by Ricardo Castro* Social drinks on the house 😉 [Challenge] URL: http://challenge.davidepaalte.x10host.com/If you have a solution talk to @davidepaalte. ",
+        "url": "https://www.meetup.com/0xOPOSEC/events/248666513/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Porto i/o Downtown",
+            "address": "R. de Cândido dos Reis 81, 4050-152 Porto",
+            "district": "Porto"
+        },
+        "name": "Porto Codes",
+        "startDate": "2018-04-12 19:00",
+        "endDate": "2018-04-12 21:00",
+        "description": "# Agenda ## 19h00 Introduction Small introduction to the Porto Codes project, and a warm up to the night's presentation. ## 19h30 TBA, TBA ## 20h30 Dinner + Santini (icecream) We will have dinner downtown, please let us know of any dietary restrictions so we can plan accordingly. Afterwards it is customary to go for icecream at Santini and continue the conversation. # Porto Codes Porto Codes is a meetup for local and international programming enthusiasts. The talks are recorded and published with the presenters' consent as one of our goals is to provide programming resources to the community. Reach us on Slack (https://invite.porto.codes) if you are interested in presenting or chatting with us! ",
+        "url": "https://www.meetup.com/portocodes/events/248503245/"
     },
     {
         "@context": "http://schema.org",
@@ -254,6 +299,21 @@
         "endDate": "2018-04-15",
         "description": "Make or Break is a 3-day tech fest with prizes, workshops, gadgets, food, and more. Co-organized by AlumniEI-FEUPPorto Codes is a meetup for local and international programming enthusiasts.",
         "url": "https://makeorbreak.io/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Porto i/o Downtown",
+            "address": "R. de Cândido dos Reis 81, 4050-152 Porto",
+            "district": "Porto"
+        },
+        "name": "Porto Codes",
+        "startDate": "2018-05-10 19:00",
+        "endDate": "2018-05-10 21:00",
+        "description": "# Agenda ## 19h00 Introduction Small introduction to the Porto Codes project, and a warm up to the night's presentation. ## 19h30 TBA, TBA ## 20h30 Dinner + Santini (icecream) We will have dinner downtown, please let us know of any dietary restrictions so we can plan accordingly. Afterwards it is customary to go for icecream at Santini and continue the conversation. # Porto Codes Porto Codes is a meetup for local and international programming enthusiasts. The talks are recorded and published with the presenters' consent as one of our goals is to provide programming resources to the community. Reach us on Slack (https://invite.porto.codes) if you are interested in presenting or chatting with us! ",
+        "url": "https://www.meetup.com/portocodes/events/248705592/"
     },
     {
         "@context": "http://schema.org",
