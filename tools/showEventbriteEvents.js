@@ -7,11 +7,12 @@ dotenv.config();
 const eventbriteToken = process.env.EVENTBRITE_TOKEN;
 const eventbriteOrganizers = process.env.EVENTBRITE_ORGANIZERS.split(',');
 
+const apiUrl = 'https://www.eventbriteapi.com';
+const authToken = `token=${eventbriteToken}`;
+
 eventbriteOrganizers.map(async (organizerId) => {
-  const apiUrl = 'https://www.eventbriteapi.com';
   const eventEndpoint = `${apiUrl}/v3/organizers/${organizerId}/events/`;
   const visibilityAttrs = 'status=live&order_by=start_desc&only_public=on';
-  const authToken = `token=${eventbriteToken}`;
   const apiEndpoint = `${eventEndpoint}?${visibilityAttrs}&${authToken}`;
   const { data } = await axios.get(apiEndpoint);
 
