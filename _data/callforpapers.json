@@ -1,36 +1,36 @@
 {
-    "sporadic": [
-        {
-            "name": "Commit Porto 2018",
-            "url": "http://commitporto.com/callforspeakers.html",
-            "description": "Commit Porto is a tech conference that brings together professionals who tackle challenges in software development with the latest technologies. It is an excellent opportunity for you to share your experience with the community!",
-            "deadline": "2018-02-28",
-            "date": "June 30",
-            "district": "Porto"
-        },
-        {
-            "name": "TECHinPORTO 2018",
-            "url": "https://techinporto.com/call-for-papers/",
-            "description": "TECHinPORTO was born in 2017 from Jumia's will to share and promote Porto's state of the art Information Technologies. By teaming up with great technology partners, we expect to bring the best from the tech community to our blooming city, learn together and deliver a kickass experience.",
-            "deadline": "2018-03-31",
-            "date": "June 14-15",
-            "district": "Porto"
-        },
-        {
-            "name": "Agile Portugal 2018",
-            "url": "https://2018.agilept.org/speakers.html",
-            "description": "Agile Portugal is an annual international conference about Agile Software Development and its practices. In its 9th edition, we expect more than 400 attendees to join us in Porto (FEUP) on a day of conference and workshops.",
-            "deadline": "2018-03-26",
-            "date": "May 25",
-            "district": "Porto"
-        }
-    ],
-    "frequent": [
-        {
-            "name": "DevOps Porto",
-            "description": "Building Bridges Between Development, Operations, Communities, Companies, People",
-            "url": "https://devopsporto.github.io/speakerfollowup.html",
-            "district": "Porto"
-        }
-    ]
+  "sporadic": [
+    {
+      "name": "Commit Porto 2018",
+      "url": "http://commitporto.com/callforspeakers.html",
+      "description": "Commit Porto is a tech conference that brings together professionals who tackle challenges in software development with the latest technologies. It is an excellent opportunity for you to share your experience with the community!",
+      "deadline": "2018-02-28",
+      "date": "June 30",
+      "district": "Porto"
+    },
+    {
+      "name": "TECHinPORTO 2018",
+      "url": "https://techinporto.com/call-for-papers/",
+      "description": "TECHinPORTO was born in 2017 from Jumia's will to share and promote Porto's state of the art Information Technologies. By teaming up with great technology partners, we expect to bring the best from the tech community to our blooming city, learn together and deliver a kickass experience.",
+      "deadline": "2018-03-31",
+      "date": "June 14-15",
+      "district": "Porto"
+    },
+    {
+      "name": "Agile Portugal 2018",
+      "url": "https://2018.agilept.org/speakers.html",
+      "description": "Agile Portugal is an annual international conference about Agile Software Development and its practices. In its 9th edition, we expect more than 400 attendees to join us in Porto (FEUP) on a day of conference and workshops.",
+      "deadline": "2018-03-26",
+      "date": "May 25",
+      "district": "Porto"
+    }
+  ],
+  "frequent": [
+    {
+      "name": "DevOps Porto",
+      "description": "Building Bridges Between Development, Operations, Communities, Companies, People",
+      "url": "https://devopsporto.github.io/speakerfollowup.html",
+      "district": "Porto"
+    }
+  ]
 }
