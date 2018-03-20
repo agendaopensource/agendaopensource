@@ -333,6 +333,21 @@
     {
         "@context": "http://schema.org",
         "@type": "Event",
+        "location": {
+            "@type": "Place",
+            "name": "Faculdade de Engenharia da Universidade do Porto",
+            "address": "R. Dr. Roberto Frias, 4200-465 Porto",
+            "district": "Porto"
+        },
+        "name": "Agile Portugal 2018",
+        "startDate": "2018-05-25",
+        "endDate": "2018-05-25",
+        "description": "Agile Portugal is an annual international conference about Agile Software Development and its practices. In its 9th edition, we expect more than 400 attendees to join us in Porto (FEUP) on a day of conference and workshops.",
+        "url": "https://2018.agilept.org/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Event",
         "location":{
             "@type": "Place",
             "name": "Hard Club",
