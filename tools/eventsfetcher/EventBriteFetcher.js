@@ -2,10 +2,11 @@ const axios = require('axios');
 const moment = require('moment');
 
 async function fetchEventbriteEvents(eventbriteToken, eventbriteOrganizers) {
+  const eventList = [];
   const apiUrl = 'https://www.eventbriteapi.com';
   const authToken = `token=${eventbriteToken}`;
   // Organizers
-  return Promise.all(eventbriteOrganizers.map(async (organizerId) => {
+  await Promise.all(eventbriteOrganizers.map(async (organizerId) => {
     const eventEndpoint = `${apiUrl}/v3/organizers/${organizerId}/events/`;
     const visibilityAttrs = 'status=live&order_by=start_desc&only_public=on';
     const apiEndpoint = `${eventEndpoint}?${visibilityAttrs}&${authToken}`;
@@ -18,7 +19,7 @@ async function fetchEventbriteEvents(eventbriteToken, eventbriteOrganizers) {
 
       const startDate = moment(`${event.start.local}`).format('YYYY-MM-DD kk:mm');
       const endDate = moment(`${event.end.local}`).format('YYYY-MM-DD kk:mm');
-      return {
+      eventList.push({
         '@context': 'http://schema.org',
         '@type': 'Event',
         location: {
@@ -32,9 +33,11 @@ async function fetchEventbriteEvents(eventbriteToken, eventbriteOrganizers) {
         endDate,
         description: event.description.text || '',
         url: event.url,
-      };
+      });
     }));
   }));
+
+  return eventList;
 }
 
 module.exports = fetchEventbriteEvents;

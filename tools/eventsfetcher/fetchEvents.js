@@ -10,25 +10,16 @@ const meetupKey = process.env.MEETUP_KEY;
 const meetupGroups = process.env.MEETUP_GROUPS.split(',');
 
 (async () => {
-  // To allow await usage
-  const [eventbrite, meetup] = await Promise.all([
-    fetchEventbriteEvents(eventbriteToken, eventbriteOrganizers),
-    fetchMeetupEvents(meetupKey, meetupGroups),
-  ]);
-  console.log("Here", eventbrite, "########################################## meetup", meetup);
-  const events = []
-    .concat(eventbrite, meetup)
-    .sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
+  // To allow the use of `await`
+  const eventbrite = await fetchEventbriteEvents(eventbriteToken, eventbriteOrganizers);
+  const meetup = await fetchMeetupEvents(meetupKey, meetupGroups);
 
-  console.log(events);
+  const events = []
+    .concat(eventbrite)
+    .concat(meetup)
+    .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+
+  process.stdout.write(`${JSON.stringify(events, null, 4)},\n`);
+
   return events;
 })();
-
-
-/*
-eventBrite.sort(function(a,b){
-  // Turn your strings into dates, and then subtract them
-  // to get a value that is either negative, positive, or zero.
-  return new Date(b.date) - new Date(a.date);
-});
-*/
