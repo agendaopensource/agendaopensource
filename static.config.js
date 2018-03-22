@@ -14,9 +14,10 @@ import callForPapers from './_data/callforpapers.json';
 dotenv.config();
 
 export default {
-  siteRoot: process.env.SITE_URL || 'http://localhost:8080/',
+  siteRoot: process.env.SITE_URL || 'http://localhost:3000/',
   getSiteData: () => ({
     analytics: process.env.SITE_ANALYTICS || '',
+    googleSearchConsoleToken: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN || '',
   }),
   getRoutes: async () => {
     const posts = [];
