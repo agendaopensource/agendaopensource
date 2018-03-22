@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, withSiteData} from 'react-static';
+import { Router, withSiteData } from 'react-static';
 import Routes from 'react-static-routes';
 import PropType from 'prop-types';
 import { Provider } from 'react-redux';
@@ -55,7 +55,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, googleSearchConsoleToken } = this.props;
 
     return (
       <Provider store={store}>
@@ -63,6 +63,9 @@ class App extends React.Component {
           <div className={classes.container}>
             <Helmet>
               <title>Open Agenda</title>
+              {googleSearchConsoleToken &&
+                <meta name="google-site-verification" content={googleSearchConsoleToken} />
+              }
             </Helmet>
             <Reboot />
             <NavigationAppBar />
