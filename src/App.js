@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import {Router, withSiteData} from 'react-static';
 import Routes from 'react-static-routes';
 import PropType from 'prop-types';
@@ -42,15 +42,12 @@ const styles = theme => ({
 const fireTracking = () => ReactGA.pageview(window.location.hash);
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    const { analytics } = props;
+  componentDidMount() {
+    const { analytics } = this.props;
     ReactGA.initialize(analytics);
     window && ReactGA.pageview(window.location.pathname);
-  }
 
-  // Remove the server-side injected CSS.
-  componentDidMount() {
+    // Remove the server-side injected CSS.
     const jssStyles = document.getElementById('jss-server-side');
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles);
