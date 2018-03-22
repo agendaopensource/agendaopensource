@@ -6,9 +6,9 @@ Codebase of [https://agendaopensource.github.io](https://agendaopensource.github
 
 # Add a new event or meetup
 
-Open an [event issue](https://github.com/agendaopensource/agendaopensource.github.io/issues/new?template=event.md&title=New%20event&labels=event), or if you feel adventurous:
+Open an [event issue](https://github.com/agendaopensource/agendaopensource/issues/new?template=event.md&title=New%20event&labels=event), or if you feel adventurous:
 
-- Edit the file [_data/events.json](https://github.com/agendaopensource/agendaopensource.github.io/blob/master/_data/events.json)
+- Edit the file [_data/events.json](/_data/events.json)
 - Add a new object to the file keeping exactly the same structure:
 ```
 {
@@ -30,8 +30,8 @@ Open an [event issue](https://github.com/agendaopensource/agendaopensource.githu
 
 # How to contribute
 
-Feel free to contribute by suggesting [new events](https://github.com/agendaopensource/agendaopensource.github.io/issues/new?template=event.md&title=New%20event&labels=event) or by fixing any [open issues](https://github.com/agendaopensource/agendaopensource.github.io/issues/).  
-Don't forget to follow our [code of condutct](https://github.com/agendaopensource/agendaopensource.github.io/blob/master/CODE_OF_CONDUCT.md)!
+Feel free to contribute by suggesting [new events](/issues/new?template=event.md&title=New%20event&labels=event) or by fixing any [open issues](/issues/).  
+Don't forget to follow our [code of condutct](/CODE_OF_CONDUCT.md)!
 
 - Fork the project
 - Create a descriptively named feature branch
@@ -48,8 +48,8 @@ There are online linters to help you, for instance:
 Assuming that you already have ``node`` and ``yarn`` already installed:
 
 ```
-$ git clone https://xxx.git
-$ cd jam-react/
+$ git clone https://github.com/agendaopensource/agendaopensource.git
+$ cd agendaopensource/
 $ yarn install 
 $ yarn start
 ```
@@ -63,32 +63,27 @@ Environment variables that are needed for development are specified in `.env.dis
 - `UID` : To define the user id for the docker container. You should use your uid to avoid permissions issues.
 - `SITE_ROOT` : Define the site base URL
 - `SITE_ANALYTICS` : Analytics token
-- `MEETUP_KEY` : Only for `tools/searchevents.js`, to access meetup api
+For `tools/searchevents.js`:
+- `MEETUP_KEY` : To access meetup api
 - `MEETUP_GROUPS` : Name of groups separated by commas
+- `EVENTBRITE_TOKEN` : Token of eventbrite api
+- `EVENTBRITE_ORGANIZERS` : Organizers to track, separated by commas
 
 # Dependencies
 
-- ``react-static``  to generate static pages and routing 
-- ``eslint`` (airbnb) - to assert that good practices are followed properly
-- ``material-ui`` for presentation
-- ``dotenv`` to facilitate configuration using environment variables (as suggested in 12factor)
-- ``moment`` to work with dates easily  
-
+- `react` A JavaScript library for building user interfaces
+- `react-static` to generate static pages and routing 
+- `redux` Predictable state container for JavaScript apps 
+- `eslint` (airbnb) - to assert that best practices are followed
+- `material-ui` for presentation layer
+- `dotenv` enable environment variables usage
+- `moment` to make dates easy to work 
+- `axios` Promise based HTTP client for the browser and node.js
 
 # ToDo:
-[] Add helmet for SEO stuff  
-[] Move all custom CSS values into theme.js  
-[] Review all styles (use theme constants!)  
-[] Documentation  
-[] Move site urls e constants to getSiteData() and consume using withSiteData  
-[] Test everything!  
-[] PWA/AMP  
-
-# Documentation
-- Airbnb lint
-- Material UI
-- react-static
-- .env support (12factor - III)
-
-
-
+- Move all custom CSS values into theme.js  
+- Review all styles (use theme constants!)  
+- Improve Documentation  
+- Move site urls e constants to getSiteData() and consume using withSiteData  
+- Test everything!  
+- PWA/AMP
