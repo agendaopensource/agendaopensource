@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Router } from 'react-static';
+import {Router, withSiteData} from 'react-static';
 import Routes from 'react-static-routes';
 import PropType from 'prop-types';
 import { Provider } from 'react-redux';
@@ -7,6 +7,7 @@ import { hot } from 'react-hot-loader';
 import Reboot from 'material-ui/Reboot';
 import { withStyles } from 'material-ui/styles';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 import NavigationAppBar from './components/NavigationAppBar';
 import Footer from './components/Footer';
 import store from './connectors/redux';
@@ -38,7 +39,16 @@ const styles = theme => ({
   },
 });
 
-class App extends PureComponent {
+const fireTracking = () => ReactGA.pageview(window.location.hash);
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    const { analytics } = props;
+    ReactGA.initialize(analytics);
+    window && ReactGA.pageview(window.location.pathname);
+  }
+
   // Remove the server-side injected CSS.
   componentDidMount() {
     const jssStyles = document.getElementById('jss-server-side');
@@ -52,7 +62,7 @@ class App extends PureComponent {
 
     return (
       <Provider store={store}>
-        <Router>
+        <Router onUpdate={fireTracking}>
           <div className={classes.container}>
             <Helmet>
               <title>Open Agenda</title>
@@ -74,6 +84,6 @@ App.propTypes = {
   classes: PropType.object.isRequired,
 };
 
-const AppWithStyles = withStyles(styles)(App);
+const AppWithStyles = withSiteData((withStyles(styles)(App)));
 
 export default hot(module)(AppWithStyles);
