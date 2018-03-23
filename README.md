@@ -80,6 +80,11 @@ For `tools/searchevents.js`:
 - `moment` to make dates easy to work 
 - `axios` Promise based HTTP client for the browser and node.js
 
+# Security
+If you discover any security related issue, please email tiagompglopes@gmail.com instead of using the issue tracker.    
+Check [security.txt](/security.txt) for more details.  
+
+
 # ToDo:
 - Move all custom CSS values into theme.js  
 - Review all styles (use theme constants!)  
