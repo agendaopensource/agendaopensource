@@ -1,2 +1,3 @@
 Contact: mailto:tiagompglopes@gmail.com
 Encryption: https://github.com/agendaopensource/agendaopensource/blob/master/pgp-key.txt
+Policy: https://github.com/agendaopensource/agendaopensource#security
