@@ -80,7 +80,7 @@ class NavigationAppBar extends React.Component {
                 Open Agenda
               </Link>
             </Typography>
-            <Hidden smDown>
+            <Hidden smDown implementation="css">
               {menu.map(menuOption => (
                 <Button
                   key={menuOption.id}

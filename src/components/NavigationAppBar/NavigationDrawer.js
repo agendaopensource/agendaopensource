@@ -10,7 +10,6 @@ import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import { Link } from 'react-static';
 import { setMenuActive } from '../../connectors/redux/actions/menu';
 import { toggleDrawer } from '../../connectors/redux/actions/drawer';
-import MenuItem from 'material-ui';
 
 const styles = {};
 
