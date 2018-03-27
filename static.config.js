@@ -2,10 +2,14 @@ import React from 'react';
 import dotenv from 'dotenv';
 import { SheetsRegistry } from 'react-jss/lib/jss';
 import JssProvider from 'react-jss/lib/JssProvider';
-import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles';
+import {
+  MuiThemeProvider,
+  createMuiTheme,
+  createGenerateClassName
+} from 'material-ui/styles';
 import moment from 'moment';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import theme from './src/theme';
-
 
 // Data
 import events from './_data/events.json';
@@ -113,4 +117,41 @@ export default {
       </Body>
     </Html>
   ),
+  webpack: (config, { defaultLoaders, stage }) => {
+    config.resolve.extensions.push('.css');
+    config.resolve.extensions.push('.scss');
+    config.resolve.extensions.push('.sass');
+    config.module.rules = [
+      {
+        oneOf: [
+          {
+            test: /\.s(a|c)ss$/,
+            use:
+              stage === 'dev'
+                ? [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }]
+                : ExtractTextPlugin.extract({
+                  use: [
+                    {
+                      loader: 'css-loader',
+                      options: {
+                        importLoaders: 1,
+                        minimize: true,
+                        sourceMap: false,
+                    },
+                  },
+                  {
+                    loader: 'sass-loader',
+                    options: { includePaths: ['src/'] },
+                  },
+                  ],
+                }),
+          },
+          defaultLoaders.cssLoader,
+          defaultLoaders.jsLoader,
+          defaultLoaders.fileLoader,
+        ],
+        },
+      ];
+      return config;
+  },
 };

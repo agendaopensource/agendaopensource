@@ -6,6 +6,13 @@ import AppConfig from './AppConfig';
 export default [
   {
     id: 1,
+    link: '/',
+    label: 'Upcoming',
+    icon: LibraryBooksIcon,
+    active: 0,
+  },
+  {
+    id: 5,
     link: '/call-for-papers',
     label: 'Call for papers',
     icon: LibraryBooksIcon,

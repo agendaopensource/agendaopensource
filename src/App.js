@@ -4,40 +4,20 @@ import Routes from 'react-static-routes';
 import PropType from 'prop-types';
 import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
-import Reboot from 'material-ui/Reboot';
-import { withStyles } from 'material-ui/styles';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
-import NavigationAppBar from './components/NavigationAppBar';
+
+// Application icons
+// import fontawesome from '@fortawesome/fontawesome';
+// import faBars from '@fortawesome/fontawesome-free-solid/faBars';
+
+import 'normalize.css';
+import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import store from './connectors/redux';
+import './style';
 
-// Custom styles
-const styles = theme => ({
-  '@global': {
-    img: {
-      maxWidth: '100%',
-    },
-    a: {
-      textDecoration: 'none',
-      color: '#FFFFFF',
-    },
-  },
-  tabs: {
-    width: '100%',
-  },
-  content: {
-    padding: '1rem',
-    paddingTop: '5rem',
-    margin: '0 auto',
-    maxWidth: '1280px',
-    minHeight: '400px',
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '80%',
-    },
-  },
-});
+// fontawesome.library.add(faBars);
 
 const fireTracking = () => ReactGA.pageview(window.location.hash);
 
@@ -45,7 +25,10 @@ class App extends React.Component {
   componentDidMount() {
     const { analytics } = this.props;
     ReactGA.initialize(analytics);
-    window && ReactGA.pageview(window.location.pathname);
+
+    if (window) {
+      ReactGA.pageview(window.location.pathname);
+    }
 
     // Remove the server-side injected CSS.
     const jssStyles = document.getElementById('jss-server-side');
@@ -55,21 +38,20 @@ class App extends React.Component {
   }
 
   render() {
-    const { classes, googleSearchConsoleToken } = this.props;
+    const { googleSearchConsoleToken } = this.props;
 
     return (
       <Provider store={store}>
         <Router onUpdate={fireTracking}>
-          <div className={classes.container}>
+          <div>
             <Helmet>
               <title>Open Agenda</title>
               {googleSearchConsoleToken &&
                 <meta name="google-site-verification" content={googleSearchConsoleToken} />
               }
             </Helmet>
-            <Reboot />
-            <NavigationAppBar />
-            <div className={classes.content}>
+            <AppBar />
+            <div>
               <Routes />
             </div>
             <Footer />
@@ -81,9 +63,8 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  classes: PropType.object.isRequired,
+  googleSearchConsoleToken: PropType.string.isRequired,
+  analytics: PropType.string.isRequired,
 };
 
-const AppWithStyles = withSiteData((withStyles(styles)(App)));
-
-export default hot(module)(AppWithStyles);
+export default hot(module)(withSiteData(App));

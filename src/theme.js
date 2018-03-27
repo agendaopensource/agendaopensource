@@ -6,8 +6,8 @@ export default {
   typography: {
     // Use the system font.
     fontFamily:
-      '-apple-system,system-ui,BlinkMacSystemFont,' +
-      '"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+    '-apple-system,system-ui,BlinkMacSystemFont,' +
+    '"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
     fontWeightSmall,
     body1: {
       fontWeight: fontWeightMedium,
