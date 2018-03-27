@@ -9,7 +9,7 @@ import AppConfig from '../../AppConfig';
 
 const styles = theme => ({
   root: {
-    backgroundColor: '#ee6e73',
+    backgroundColor: '#1991bd',
     color: '#ffffff',
   },
   container: {
@@ -43,6 +43,9 @@ const styles = theme => ({
     width: '15px',
     verticalAlign: 'text-bottom',
   },
+  link: {
+    color: '#ffffff',
+  }
 });
 
 const Footer = ({ classes }) => (
@@ -72,6 +75,7 @@ const Footer = ({ classes }) => (
                   href={AppConfig.githubUrl}
                   target="_blank"
                   rel="noopener"
+                  className={classes.link}
                 >
                   GitHub
                 </Link>
