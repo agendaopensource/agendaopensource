@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
+import classNames from 'classnames';
 
 // Application icons
 // import fontawesome from '@fortawesome/fontawesome';
@@ -51,7 +52,7 @@ class App extends React.Component {
               }
             </Helmet>
             <AppBar />
-            <div>
+            <div className={classNames('appContainer')}>
               <Routes />
             </div>
             <Footer />

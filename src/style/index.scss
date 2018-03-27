@@ -1,4 +1,5 @@
 @import 'palette';
+@import 'variables';
 
 html, body {
   height: 100%;
@@ -8,43 +9,12 @@ html, body {
   background: $bg-light;
   font: 15px/1.8 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
-  color: #444;
+  color: $text-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-$header-height: 56px;
-$header-mobile-breakpoint: 600px;
-
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: $header-height;
-  padding: 0;
-  background: #673AB8;
-  // background: rgba(103,58,184,.98);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 500;
-  overflow: visible;
-  text-align: center;
-  transition: all 250ms ease;
-  transform: translateZ(0);
-
-  @media (max-width: $header-mobile-breakpoint) {
-    overflow: hidden;
-
-    &.open {
-      background: #222;
-      height: 100%;
-      overflow: auto;
-      overflow-scrolling: touch;
-
-      nav {
-        margin-right: 0;
-      }
-    }
-  }
+.appContainer {
+  padding: 15px;
+  padding-top: ($header-height-px + 10) * 1px;
 }

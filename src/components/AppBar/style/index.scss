@@ -1,7 +1,6 @@
 @import '~style/palette';
 @import '~style/variables';
 
-$header-height: 60px;
 $header-mobile-breakpoint: 700px;
 
 .appBar {
@@ -10,7 +9,7 @@ $header-mobile-breakpoint: 700px;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: $header-height;
+	height: $header-height-px * 1px;
 	padding: 0;
   background: $bg-primary;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -49,8 +48,8 @@ $header-mobile-breakpoint: 700px;
     a {
 			display: inline-block;
 			position: relative;
-			height: $header-height;
-			line-height: $header-height;
+			height: $header-height-px * 1px;
+			line-height: $header-height-px * 1px;
 			padding: 0 20px;
 			min-width: 50px;
 			border: none;
@@ -111,7 +110,7 @@ $header-mobile-breakpoint: 700px;
 	width: 20px;
 	height: 20px;
 	padding: 18px 15px 12px;
-	line-height: $header-height;
+	line-height: $header-height-px * 1px;
 	text-align: center;
 	z-index: 100;
 	opacity: 0.7;
