@@ -11,14 +11,14 @@ $header-mobile-breakpoint: 700px;
 	width: 100%;
 	height: $header-height-px * 1px;
 	padding: 0;
-  	background: $bg-primary;
+	background: #24292e; //$bg-primary;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	z-index: 500;
 	overflow: visible;
 	text-align: center;
 	transition: all 250ms ease;
 	transform: translateZ(0);
-  color: $text-light;
+  color: rgba(255,255,255,0.75);
 
   @media (max-width: $header-mobile-breakpoint) {
 		overflow: hidden;
@@ -32,6 +32,10 @@ $header-mobile-breakpoint: 700px;
 			}
 		}
 	}
+
+  .logo {
+    color: #FFFFFF;
+  }
 
   nav {
     position: relative;
@@ -57,7 +61,7 @@ $header-mobile-breakpoint: 700px;
 			background-color: rgba(255,255,255,0);
 			text-decoration: none;
 			font-size: 16px;
-			color: #EEE;
+			color: rgba(255,255,255,0.75);
 			cursor: pointer;
 
 			@media (max-width: $header-mobile-breakpoint) {
