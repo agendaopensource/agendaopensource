@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
-import classNames from 'classnames';
 
 // Application icons
 // import fontawesome from '@fortawesome/fontawesome';
@@ -44,7 +43,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <Router onUpdate={fireTracking}>
-          <div>
+          <div className="appContainer">
             <Helmet>
               <title>Open Agenda</title>
               {googleSearchConsoleToken &&
@@ -52,7 +51,7 @@ class App extends React.Component {
               }
             </Helmet>
             <AppBar />
-            <div className={classNames('appContainer')}>
+            <div className="container">
               <Routes />
             </div>
             <Footer />

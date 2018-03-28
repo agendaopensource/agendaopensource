@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import './style/index.scss';
 
 const Hbbar = ({ open, ...props }) => (
-  <div className={classNames('hbbar')} open={open} {...props}>
-    <div className={classNames('hb1')} />
-    <div className={classNames('hb2')} />
-    <div className={classNames('hb3')} />
+  <div className="hbbar" open={open} {...props}>
+    <div className="hb1" />
+    <div className="hb2" />
+    <div className="hb3" />
   </div>
 );
 
@@ -34,7 +34,7 @@ class AppBar extends React.Component {
       <div className={classNames('appBar', this.state.open && 'open')}>
         <Hbbar open={this.state.open} onClick={this.toggle} />
         <nav>
-          <Link to="/" href="/" className={classNames('logo')}>
+          <Link to="/" href="/" className="logo">
             Open Agenda
           </Link>
           {menu.map(menuOption => (
