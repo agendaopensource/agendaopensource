@@ -1,15 +1,12 @@
 import React from 'react';
 import dotenv from 'dotenv';
-import { SheetsRegistry } from 'react-jss/lib/jss';
-import JssProvider from 'react-jss/lib/JssProvider';
-import {
-  MuiThemeProvider,
-  createMuiTheme,
-  createGenerateClassName
-} from 'material-ui/styles';
+// import { SheetsRegistry } from 'react-jss/lib/jss';
+// import JssProvider from 'react-jss/lib/JssProvider';
+
+import { JssProvider, SheetsRegistry } from 'react-jss';
+
 import moment from 'moment';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import theme from './src/theme';
 
 // Data
 import events from './_data/events.json';
@@ -24,8 +21,6 @@ export default {
     googleSearchConsoleToken: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN || '',
   }),
   getRoutes: async () => {
-    const posts = [];
-
     const tailoredEvents = events
       .filter(event => moment(event.endDate).isAfter())
       .map((eventObj, index) => {
@@ -71,18 +66,12 @@ export default {
   renderToHtml: (render, Comp, meta) => {
     const metaUpdated = meta;
     const sheetsRegistry = new SheetsRegistry();
-    const muiTheme = createMuiTheme(theme);
-    const generateClassName = createGenerateClassName();
     const html = render((
       <JssProvider
         registry={sheetsRegistry}
-        generateClassName={generateClassName}
       >
-        <MuiThemeProvider theme={muiTheme} sheetsManager={new Map()}>
-          <Comp />
-        </MuiThemeProvider>
+        <Comp />
       </JssProvider>));
-
     metaUpdated.jssStyles = sheetsRegistry.toString();
     return html;
   },

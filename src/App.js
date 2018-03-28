@@ -6,18 +6,11 @@ import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
-
-// Application icons
-// import fontawesome from '@fortawesome/fontawesome';
-// import faBars from '@fortawesome/fontawesome-free-solid/faBars';
-
 import 'normalize.css';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import store from './connectors/redux';
 import './style';
-
-// fontawesome.library.add(faBars);
 
 const fireTracking = () => ReactGA.pageview(window.location.hash);
 
