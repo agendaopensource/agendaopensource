@@ -1,15 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouteData, Link } from 'react-static';
-import { withStyles } from 'material-ui/styles';
-import Grid from 'material-ui/Grid';
-import Paper from 'material-ui/Paper';
-import Typography from 'material-ui/Typography';
-// Icons
-import ScheduleIcon from 'material-ui-icons/Schedule';
-import PlaceIcon from 'material-ui-icons/Place';
 import FriendlyRangeDate from './FriendlyRangeDate';
-
 import AppConfig from '../../AppConfig';
 import './style';
 
