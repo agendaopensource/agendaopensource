@@ -75,7 +75,6 @@ For `tools/searchevents.js`:
 - `react-static` to generate static pages and routing 
 - `redux` Predictable state container for JavaScript apps 
 - `eslint` (airbnb) - to assert that best practices are followed
-- `material-ui` for presentation layer
 - `dotenv` enable environment variables usage
 - `moment` to make dates easy to work 
 - `axios` Promise based HTTP client for the browser and node.js
@@ -86,9 +85,8 @@ Check [security.txt](/security.txt) for more details.
 
 
 # ToDo:
-- Move all custom CSS values into theme.js  
 - Review all styles (use theme constants!)  
 - Improve Documentation  
 - Move site urls e constants to getSiteData() and consume using withSiteData  
 - Test everything!  
-- PWA/AMP
+- PWA

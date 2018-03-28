@@ -1,11 +1,12 @@
 import React from 'react';
 import dotenv from 'dotenv';
-import { SheetsRegistry } from 'react-jss/lib/jss';
-import JssProvider from 'react-jss/lib/JssProvider';
-import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles';
-import moment from 'moment';
-import theme from './src/theme';
+// import { SheetsRegistry } from 'react-jss/lib/jss';
+// import JssProvider from 'react-jss/lib/JssProvider';
 
+import { JssProvider, SheetsRegistry } from 'react-jss';
+
+import moment from 'moment';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 // Data
 import events from './_data/events.json';
@@ -20,8 +21,6 @@ export default {
     googleSearchConsoleToken: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN || '',
   }),
   getRoutes: async () => {
-    const posts = [];
-
     const tailoredEvents = events
       .filter(event => moment(event.endDate).isAfter())
       .map((eventObj, index) => {
@@ -59,21 +58,6 @@ export default {
         component: 'src/containers/About',
       },
       {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getData: () => ({
-          posts,
-          events: tailoredEvents,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
-      },
-      {
         is404: true,
         component: 'src/containers/404',
       },
@@ -82,18 +66,12 @@ export default {
   renderToHtml: (render, Comp, meta) => {
     const metaUpdated = meta;
     const sheetsRegistry = new SheetsRegistry();
-    const muiTheme = createMuiTheme(theme);
-    const generateClassName = createGenerateClassName();
     const html = render((
       <JssProvider
         registry={sheetsRegistry}
-        generateClassName={generateClassName}
       >
-        <MuiThemeProvider theme={muiTheme} sheetsManager={new Map()}>
-          <Comp />
-        </MuiThemeProvider>
+        <Comp />
       </JssProvider>));
-
     metaUpdated.jssStyles = sheetsRegistry.toString();
     return html;
   },
@@ -113,4 +91,41 @@ export default {
       </Body>
     </Html>
   ),
+  webpack: (config, { defaultLoaders, stage }) => {
+    config.resolve.extensions.push('.css');
+    config.resolve.extensions.push('.scss');
+    config.resolve.extensions.push('.sass');
+    config.module.rules = [
+      {
+        oneOf: [
+          {
+            test: /\.s(a|c)ss$/,
+            use:
+              stage === 'dev'
+                ? [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }]
+                : ExtractTextPlugin.extract({
+                  use: [
+                    {
+                      loader: 'css-loader',
+                      options: {
+                        importLoaders: 1,
+                        minimize: true,
+                        sourceMap: false,
+                    },
+                  },
+                  {
+                    loader: 'sass-loader',
+                    options: { includePaths: ['src/'] },
+                  },
+                  ],
+                }),
+          },
+          defaultLoaders.cssLoader,
+          defaultLoaders.jsLoader,
+          defaultLoaders.fileLoader,
+        ],
+        },
+      ];
+      return config;
+  },
 };

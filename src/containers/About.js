@@ -1,23 +1,16 @@
 import React from 'react';
-//
-import Typography from 'material-ui/Typography';
-import { withStyles } from 'material-ui/styles';
 
-const styles = {};
-
-export default withStyles(styles)(() => (
+export default () => (
   <div>
-    <Typography paragraph variant="headline" component="h1">
-      About
-    </Typography>
-    <Typography type="body1">
+    <h1>About</h1>
+    <p>
       This project was born to act as a glue to different organizations that are currently
-      pushing events or meetups.
+      pushing events or meetups.<br />
       Another goal is to link speakers to events and vice versa, by having a curated repository
       of Speakers and a call for papers list.
-    </Typography>
-    <Typography paragraph type="body1">
+    </p>
+    <p>
       Please support this initiative by adding more events to the current curated list.
-    </Typography>
+    </p>
   </div>
-));
+);
