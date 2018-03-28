@@ -39,6 +39,7 @@ class App extends React.Component {
           <div className="appContainer">
             <Helmet>
               <title>Open Agenda</title>
+              <meta name="description" content="An opensource and curated list of tech events in Portugal" />
               {googleSearchConsoleToken &&
                 <meta name="google-site-verification" content={googleSearchConsoleToken} />
               }

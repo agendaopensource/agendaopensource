@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouteData, Link } from 'react-static';
 import PropTypes from 'prop-types';
-
+import Helmet from 'react-helmet';
 class CallForPapers extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +16,9 @@ class CallForPapers extends React.Component {
 
     return (
       <div>
+        <Helmet>
+          <title>Open Agenda | Call for papers</title>
+        </Helmet>
         <h1>
           Call for Papers
         </h1>

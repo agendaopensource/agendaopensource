@@ -1,7 +1,11 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 export default () => (
   <div>
+    <Helmet>
+      <title>Open Agenda | Speakers</title>
+    </Helmet>
     <h1>
       Speakers
     </h1>

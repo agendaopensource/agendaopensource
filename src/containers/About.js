@@ -1,7 +1,12 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 export default () => (
   <div>
+    <Helmet>
+      <title>Open Agenda | About</title>
+    </Helmet>
+
     <h1>About</h1>
     <p>
       This project was born to act as a glue to different organizations that are currently
