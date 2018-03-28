@@ -1,5 +1,6 @@
 @import 'palette';
 @import 'variables';
+@import 'font';
 
 html, body {
   height: 100%;
@@ -19,6 +20,11 @@ html, body {
   min-height: 100vh;
   height: 100%;
   flex-direction: column;
+
+  a {
+    color: #0366d6;
+    text-decoration: none;
+  }
 }
 
 .container {
