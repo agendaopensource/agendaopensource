@@ -1,12 +1,9 @@
 import React from 'react';
 import dotenv from 'dotenv';
-// import { SheetsRegistry } from 'react-jss/lib/jss';
-// import JssProvider from 'react-jss/lib/JssProvider';
-
 import { JssProvider, SheetsRegistry } from 'react-jss';
-
 import moment from 'moment';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import SWPrecacheWebpackPlugin from 'sw-precache-webpack-plugin';
 
 // Data
 import events from './_data/events.json';
@@ -14,8 +11,10 @@ import callForPapers from './_data/callforpapers.json';
 
 dotenv.config();
 
+const getSiteRoot = () => process.env.SITE_URL || 'http://localhost:3000/';
+
 export default {
-  siteRoot: process.env.SITE_URL || 'http://localhost:3000/',
+  siteRoot: getSiteRoot(),
   getSiteData: () => ({
     analytics: process.env.SITE_ANALYTICS || '',
     googleSearchConsoleToken: process.env.GOOGLE_SEARCH_CONSOLE_TOKEN || '',
@@ -84,6 +83,7 @@ export default {
         <title>Open Agenda</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#24292e" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <Body>
@@ -96,6 +96,23 @@ export default {
     config.resolve.extensions.push('.css');
     config.resolve.extensions.push('.scss');
     config.resolve.extensions.push('.sass');
+    config.plugins.push(new SWPrecacheWebpackPlugin({
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: 'service-worker.js',
+      logger(message) {
+        if (message.indexOf('Total precache size is') === 0) {
+          return;
+        }
+        if (message.indexOf('Skipping static resource') === 0) {
+          return;
+        }
+        console.log(message);
+      },
+      minify: true,
+      navigateFallback: `${getSiteRoot()}/index.html`,
+      navigateFallbackWhitelist: [/^(?!\/__).*/],
+      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+    }));
     config.module.rules = [
       {
         oneOf: [
@@ -112,12 +129,12 @@ export default {
                         importLoaders: 1,
                         minimize: true,
                         sourceMap: false,
+                      },
                     },
-                  },
-                  {
-                    loader: 'sass-loader',
-                    options: { includePaths: ['src/'] },
-                  },
+                    {
+                      loader: 'sass-loader',
+                      options: { includePaths: ['src/'] },
+                    },
                   ],
                 }),
           },
@@ -125,8 +142,8 @@ export default {
           defaultLoaders.jsLoader,
           defaultLoaders.fileLoader,
         ],
-        },
-      ];
-      return config;
+      },
+    ];
+    return config;
   },
 };

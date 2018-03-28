@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import registerServiceWorker from 'registerServiceWorker';
 
 // Your top level component
 import App from './App';
@@ -12,11 +13,12 @@ if (typeof document !== 'undefined') {
   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
   const render = (Comp) => {
-    renderMethod(<Comp />,
+    renderMethod(
+      <Comp />,
       document.getElementById('root'),
     );
   };
-
   // Render!
   render(App);
+  registerServiceWorker();
 }
