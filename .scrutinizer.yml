@@ -1,0 +1,25 @@
+checks:
+    javascript:
+        no_var: true
+        eqeqeq: true
+        no_param_assign: true
+        no_loop_var_assign: true
+        no_implicit_undefined_return: true
+        no_else_return: true
+        no_alert: true
+build:
+    nodes:
+        analysis:
+            environment:
+                node:
+                    version: 9.5.0
+            tests:
+                override:
+                    -
+                        command: scss-lint-run
+                        use_website_config: true
+
+        tests: true
+    tests:
+        override:
+            - eslint-run --config .eslintrc.json
