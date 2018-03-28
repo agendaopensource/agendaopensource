@@ -34,21 +34,22 @@ class EventList extends React.Component {
                 {event.name}
               </Link>
             </h1>
-            <FriendlyRangeDate startDate={event.startDate} endDate={event.endDate} />
-            { event.location && (
-              <span>
-                @
-                { ' ' }
-                <Link
-                  to={googleMapLink(event.location.address)}
-                  href={googleMapLink(event.location.address)}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  { event.location.name }
-                </Link>
-              </span>
-            )}
+            <div>
+              <FriendlyRangeDate startDate={event.startDate} endDate={event.endDate} />
+              { event.location && (
+                <span>
+                  { ' @ ' }
+                  <Link
+                    to={googleMapLink(event.location.address)}
+                    href={googleMapLink(event.location.address)}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    { event.location.name }
+                  </Link>
+                </span>
+              )}
+            </div>
             <p>
               {event.description}
             </p>
