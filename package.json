@@ -7,7 +7,9 @@
     "start": "react-static start",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "test": "npx eslint ./src/"
+    "test": "npx eslint ./src/",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -30,7 +32,8 @@
     "react-static": "^5.3.4",
     "redux": "^3.7.2",
     "sass-loader": "^6.0.7",
-    "sw-precache-webpack-plugin": "^0.11.5"
+    "sw-precache-webpack-plugin": "^0.11.5",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "eslint": "^4.18.1",
@@ -39,5 +42,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "serve": "^6.1.0"
-  }
+  },
+  "snyk": true
 }
