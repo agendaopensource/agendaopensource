@@ -9,9 +9,9 @@ cache:
   directories:
     - node_modules
 install:
-  - yarn install
+  - npm install
 script:
-  - yarn build
+  - npm build
 after_success:
  - cd dist/
  - git init .
