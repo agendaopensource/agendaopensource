@@ -45,13 +45,13 @@ There are online linters to help you, for instance:
 
 # Run this project locally
 
-Assuming that you already have ``node`` and ``yarn`` already installed:
+Assuming that you already have ``node`` already installed:
 
 ```
 $ git clone https://github.com/agendaopensource/agendaopensource.git
 $ cd agendaopensource/
-$ yarn install 
-$ yarn start
+$ npm install 
+$ npm start
 ```
 Then open http://localhost:3000/
 
