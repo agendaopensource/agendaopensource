@@ -13,7 +13,7 @@
     "update-packages": "npx -p npm-check-updates ncu -u"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^1.6.3",
     "classnames": "^2.2.6",
     "css-loader": "^1.0.0",
     "dotenv": "^6.0.0",
