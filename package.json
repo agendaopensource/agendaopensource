@@ -13,7 +13,7 @@
     "update-packages": "npx -p npm-check-updates ncu -u"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^1.12.0",
     "classnames": "^2.2.6",
     "css-loader": "^1.0.0",
     "dotenv": "^6.0.0",
@@ -33,7 +33,7 @@
     "react-static": "^5.9.7",
     "redux": "^4.0.0",
     "sass-loader": "^7.1.0",
-    "snyk": "^1.85.0",
+    "snyk": "^1.996.0",
     "sw-precache-webpack-plugin": "^0.11.5"
   },
   "devDependencies": {
